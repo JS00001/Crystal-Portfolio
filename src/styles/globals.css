@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-color: #1E2235;
+  --primary-color: #2D2DC8;
+  --secondary-color: #29325E;
+}
+
+
+@layer components{
+  body {
+    @apply bg-main h-screen
+  }
+  
+  .offset-shadow-sm {
+    transition: 0.35s;
+    box-shadow: 0.2em 0.2em 0 0 var(--primary-color) ;
+  }
+
+  .offset-shadow-md {
+    transition: 0.35s;
+    box-shadow: 0.3em 0.3em 0 0 var(--primary-color) ;
+  }
+  
+  .offset-shadow-sm:hover, .offset-shadow-md:hover {
+    transition: 0.35s;
+    box-shadow: 0 0 0 0 var(--primary-color);
+  }
+
+  .text-outlined {
+    @apply bg-primary bg-clip-text text-main;
+    -webkit-text-stroke: 5px transparent
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-primary
+  }
+
+  .test-class {
+    height: 0px;
+    -webkit-transition: height 0.5s linear;
+  }
+
+  .test-class.open-now {
+    height: 100px;
+    -webkit-transition: height 0.5s linear;
+  }
+}
