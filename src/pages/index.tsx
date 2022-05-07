@@ -1,9 +1,8 @@
-import Background from '@/components/Background';
+import { Background, Scroll } from '@/components/Background';
 import Button from '@/components/Button';
 import Team from '@/components/Team';
 import Faq from '@/components/Faq';
 import Navbar from '@/components/Navbar';
-import Scroll from '@/components/Scroll';
 import Section from '@/components/Section';
 import Project from '@/components/Project';
 import Stat from '@/components/Stat';
@@ -19,8 +18,8 @@ const Index: React.FC = () => {
 			</nav>
 
 			<figure>
-				<Scroll />
 				<Background />
+				<Scroll />
 			</figure>
 
 			<main className='relative z-10'>

@@ -1,3 +1,4 @@
 import Background from './Background';
+import Scroll from './Scroll';
 
-export default Background;
+export { Background, Scroll };
