@@ -1,2 +1,5 @@
-# crystal-portfolio
- A portfolio for a software company
+![image](https://user-images.githubusercontent.com/49812749/167239303-2e066f61-e384-43b0-abe9-06dfe082c4dc.png)
+![image](https://user-images.githubusercontent.com/49812749/167239313-a29ebcb1-b9dd-4df5-bf1e-d448bc83a37b.png)
+![image](https://user-images.githubusercontent.com/49812749/167239318-2f4a9818-06e6-4218-9391-3c67b5fd46bd.png)
+![image](https://user-images.githubusercontent.com/49812749/167239324-c6e5b788-2e79-4952-b47d-c44268883de0.png)
+![image](https://user-images.githubusercontent.com/49812749/167239326-9cd03234-e0b3-4413-8082-0b284794b553.png)
