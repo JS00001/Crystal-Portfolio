@@ -1,4 +1,50 @@
-const Content = {
+import * as Fa from 'react-icons/fa';
+import type { IconType } from 'react-icons/lib/cjs';
+
+interface IContent {
+	stats: {
+		icon: IconType;
+		title: string;
+		value: string;
+	}[];
+	faqs: {
+		question: string;
+		answer: string;
+	}[];
+	team: {
+		name: string;
+		logo: string;
+	}[];
+	projects: {
+		title: string;
+		description: string;
+		image: string;
+	}[];
+	navigation: {
+		title: string;
+		url: string;
+	}[];
+}
+
+const Content: IContent = {
+	// Icon MUST be a valid FontAwesome icon name
+	stats: [
+		{
+			icon: Fa['FaUser'],
+			title: 'Users',
+			value: '50,000+',
+		},
+		{
+			icon: Fa['FaMoneyBillWave'],
+			title: 'Transactions',
+			value: '10,000+',
+		},
+		{
+			icon: Fa['FaTag'],
+			title: 'Customers',
+			value: '7,000+',
+		},
+	],
 	faqs: [
 		{
 			question: 'What is the purpose of this website?',
@@ -17,21 +63,21 @@ const Content = {
 			answer: 'lorum ipsum',
 		},
 	],
-	clients: [
+	team: [
 		{
-			name: 'Client 1',
+			name: 'Team 1',
 			logo: '/logo-white.png',
 		},
 		{
-			name: 'Client 2',
+			name: 'Team 2',
 			logo: '/logo-white.png',
 		},
 		{
-			name: 'Client 3',
+			name: 'Team 3',
 			logo: '/logo-white.png',
 		},
 		{
-			name: 'Client 4',
+			name: 'Team 4',
 			logo: '/logo-white.png',
 		},
 	],
@@ -61,8 +107,8 @@ const Content = {
 			url: '/#projects',
 		},
 		{
-			title: 'Clients',
-			url: '/#clients',
+			title: 'Team',
+			url: '/#team',
 		},
 		{
 			title: 'FAQs',

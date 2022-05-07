@@ -1,9 +1,9 @@
-export type ClientProps = {
+export type TeamProps = {
 	name: string;
 	logo: string;
 };
 
-const Client: React.FC<ClientProps> = ({ name, logo }) => {
+const Team: React.FC<TeamProps> = ({ name, logo }) => {
 	return (
 		<div className='bg-secondary offset-shadow-sm p-5 flex flex-col items-center justify-center h-64'>
 			<img src={logo} height={128} width={128} />
@@ -12,4 +12,4 @@ const Client: React.FC<ClientProps> = ({ name, logo }) => {
 	);
 };
 
-export default Client;
+export default Team;

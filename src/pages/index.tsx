@@ -1,11 +1,12 @@
 import Background from '@/components/Background';
 import Button from '@/components/Button';
-import Client from '@/components/Client';
+import Team from '@/components/Team';
 import Faq from '@/components/Faq';
 import Navbar from '@/components/Navbar';
 import Scroll from '@/components/Scroll';
 import Section from '@/components/Section';
 import Project from '@/components/Project';
+import Stat from '@/components/Stat';
 import Content from '@/content';
 
 import Link from 'next/link';
@@ -28,7 +29,7 @@ const Index: React.FC = () => {
 					<h1 className='text-white font-extrabold text-center text-6xl md:text-7xl lg:text-9xl lg:text-left'>
 						Crystal
 					</h1>
-					<h1 className='py-4 text-center font-extrabold text-outlined text-6xl md:text-7xl lg:ml-16 lg:text-9xl lg:text-left'>
+					<h1 className='py-4 text-center font-extrabold text-outlined text-5xl sm:text-6xl md:text-7xl lg:ml-16 lg:text-9xl lg:text-left'>
 						Development
 					</h1>
 					<div className='flex flex-col items-center lg:block'>
@@ -39,12 +40,22 @@ const Index: React.FC = () => {
 					</div>
 				</Section>
 
-				{/* Clients */}
-				<Section id='clients'>
-					<h1 className='text-white text-4xl font-bold'>Clients</h1>
+				{/* Stats */}
+				<Section id='#stats'>
+					<h1 className='text-white text-4xl font-bold'>Stats</h1>
+					<div className='grid gap-20 mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+						{Content.stats.map((stat, index) => (
+							<Stat key={index} icon={stat.icon} title={stat.title} value={stat.value} />
+						))}
+					</div>
+				</Section>
+
+				{/* Team */}
+				<Section id='team'>
+					<h1 className='text-white text-4xl font-bold'>Team</h1>
 					<div className='grid gap-4 mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-						{Content.clients.map((client, index) => (
-							<Client key={index} name={client.name} logo={client.logo} />
+						{Content.team.map((member, index) => (
+							<Team key={index} name={member.name} logo={member.logo} />
 						))}
 					</div>
 				</Section>
