@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { IoIosAdd } from 'react-icons/io';
+import { IoMdRemove } from 'react-icons/io';
 
 export type FaqProps = {
 	question: string;
@@ -18,7 +19,7 @@ const Faq: React.FC<FaqProps> = ({ question, answer }) => {
 			<div className='w-full flex justify-between items-center cursor-pointer' onClick={onClick}>
 				<p className='text-xl font-medium'>{question}</p>
 				<span className='bg-secondary p-2 rounded-full'>
-					<IoIosAdd size={30} />
+					{expanded ? <IoMdRemove size={30} /> : <IoIosAdd size={30} />}
 				</span>
 			</div>
 
