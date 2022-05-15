@@ -1,4 +1,4 @@
-// Comment Ba
+// Comment Bad
 
 const Background: React.FC = () => {
 	return (
