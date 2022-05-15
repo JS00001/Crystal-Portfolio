@@ -1,3 +1,5 @@
+// Comment
+
 const Background: React.FC = () => {
 	return (
 		<div className=' fixed top-0 left-0 w-full h-full px-20 md:px-40'>
