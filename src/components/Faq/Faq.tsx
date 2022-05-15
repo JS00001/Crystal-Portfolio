@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import { useState } from 'react';
 import { IoIosAdd } from 'react-icons/io';
 import { IoMdRemove } from 'react-icons/io';
@@ -25,7 +26,7 @@ const Faq: React.FC<FaqProps> = ({ question, answer }) => {
 
 			{expanded && (
 				<div>
-					<p>{answer}</p>
+					<p>{parse(answer)}</p>
 				</div>
 			)}
 		</div>

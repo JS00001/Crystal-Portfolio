@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 					</div>
 					<div className='flex gap-x-12 text-lg items-center'>
 						{Content.navigation.map((item, key) => (
-							<NavItem item={item.title} url={item.url} key={key} />
+							<NavItem key={key} {...item} />
 						))}
 						<Button size='sm'>Contact</Button>
 					</div>
@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
 	);
 };
 
-const NavItem: React.FC<{ item: string; url: string }> = ({ item, url }) => {
+const NavItem: React.FC<{ title: string; url: string }> = ({ title, url }) => {
 	return (
 		<a className='text-white cursor-pointer hover:text-gray-300 hidden md:block' href={url}>
-			{item}
+			{title}
 		</a>
 	);
 };

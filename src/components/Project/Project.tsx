@@ -7,7 +7,7 @@ export type ProjectProps = {
 const Project: React.FC<ProjectProps> = ({ title, description, image }) => {
 	return (
 		<div className='bg-secondary offset-shadow-md p-5'>
-			<img src={image} />
+			<img src={image} alt='Project Image' className='text-white' />
 			<h1 className='py-2 text-xl font-bold text-white'>{title}</h1>
 			<h2 className='text-white'>{description}</h2>
 		</div>

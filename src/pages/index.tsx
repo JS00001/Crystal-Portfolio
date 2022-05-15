@@ -9,10 +9,15 @@ import Stat from '@/components/Stat';
 import Content from '@/content';
 
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Index: React.FC = () => {
 	return (
 		<>
+			<Head>
+				<title>Crystal Development</title>
+			</Head>
+
 			<nav className='relative z-10'>
 				<Navbar />
 			</nav>
@@ -44,7 +49,7 @@ const Index: React.FC = () => {
 					<h1 className='text-white text-4xl font-bold'>Stats</h1>
 					<div className='grid gap-20 mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 						{Content.stats.map((stat, index) => (
-							<Stat key={index} icon={stat.icon} title={stat.title} value={stat.value} />
+							<Stat key={index} {...stat} />
 						))}
 					</div>
 				</Section>
@@ -54,7 +59,7 @@ const Index: React.FC = () => {
 					<h1 className='text-white text-4xl font-bold'>Team</h1>
 					<div className='grid gap-4 mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
 						{Content.team.map((member, index) => (
-							<Team key={index} name={member.name} logo={member.logo} />
+							<Team key={index} {...member} />
 						))}
 					</div>
 				</Section>
@@ -64,12 +69,7 @@ const Index: React.FC = () => {
 					<h1 className='text-white text-4xl font-bold'>Projects</h1>
 					<div className='grid gap-6 mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 						{Content.projects.map((project, index) => (
-							<Project
-								key={index}
-								title={project.title}
-								description={project.description}
-								image={project.image}
-							/>
+							<Project key={index} {...project} />
 						))}
 					</div>
 				</Section>
@@ -78,7 +78,7 @@ const Index: React.FC = () => {
 				<Section className='bg-main' id='faqs'>
 					<h1 className='text-white text-4xl font-bold mb-10'>FAQ</h1>
 					{Content.faqs.map((faq, index) => (
-						<Faq key={index} question={faq.question} answer={faq.answer} />
+						<Faq key={index} {...faq} />
 					))}
 				</Section>
 			</main>
