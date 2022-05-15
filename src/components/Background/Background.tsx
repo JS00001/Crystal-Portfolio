@@ -1,4 +1,4 @@
-// Comment
+// Comment B
 
 const Background: React.FC = () => {
 	return (
